@@ -4,16 +4,45 @@
     <meta charset="UTF-8">
     <title>Flipping Game</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
-<body>
-<h1 class="game-title">Flipping Game</h1>
-<div>time</div>
-<div>score</div>
-<div id="game-board"></div>
-<script src="script.js">
-</script>
+<body >
+
+<audio id="music" >
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+<div class="container">
+    <div class="header">
+        <h1>Flipping Game</h1>
+    </div>
+    <section class="score-panel">
+        <ul id="star-rating" class="star-rating">
+            <li class="star"><i class="fa fa-star"></i></li>
+            <li class="star"><i class="fa fa-star"></i></li>
+            <li class="star"><i class="fa fa-star"></i></li>
+        </ul>
+        <div class="moves"><span class="moves-counter">0</span> Moves</div>
+        <div class="timer-container">
+            <span class="timer"><i class="fa fa-hourglass-start"></i> Timer: 00:00</span>
+        </div>
+        <div class="reset">
+            <button value="Star" onclick="startGame();playmusic()">Star Game</button>
+            <button class="reset" style="width: 50px;height: 30px">Reset <i class="fa fa-repeat"></i></button>
+        </div>
+    </section>
+    <section class="win-game-modal">
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Congratulations!</h2>
+                <p>You have won the game and found all 8 pairs of cards.</p>
+                <img class="modal-img" src="image/code.png" >
+                <button class="btn play-again-btn">Play Again?</button>
+            </div>
+        </div>
+    </section>
+    <ul class="deck"></ul>
+</div>
+<script src="script.js"></script>
 </body>
 </html><script>
-
 </script>
