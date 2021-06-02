@@ -10,25 +10,32 @@
 <audio id="music" >
     <source src="music.mp3" type="audio/mpeg">
 </audio>
+<!--tạo khối-->
 <div class="container">
+    <!--tên game-->
     <div class="header">
         <h1>Flipping Game</h1>
     </div>
+    <!--bảng giá-->
     <section class="score-panel">
         <ul id="star-rating" class="star-rating">
             <li class="star"><i class="fa fa-star"></i></li>
             <li class="star"><i class="fa fa-star"></i></li>
             <li class="star"><i class="fa fa-star"></i></li>
         </ul>
+        <!--số lần lật-->
         <div class="moves"><span class="moves-counter">0</span> Moves</div>
+        <!--khối đồng hồ đếm thời gian-->
         <div class="timer-container">
             <span class="timer"><i class="fa fa-hourglass-start"></i> Timer: 00:00</span>
         </div>
+        <!--nút bắt đầu và chơi lại-->
         <div class="reset">
             <button class="reset" onclick="startGame();playmusic()" >Star Game</button>
             <button class="reset" style="width: 50px;height: 30px">Reset <i class="fa fa-repeat"></i></button>
         </div>
     </section>
+    <!--khối hiển thị khi kết thúc game(hộp phương thức)-->
     <section class="win-game-modal">
         <div id="modal" class="modal">
             <div class="modal-content">
@@ -40,6 +47,7 @@
             </div>
         </div>
     </section>
+    <!--khối khởi tạo để đưa các thẻ ảnh-->
     <ul class="deck"></ul>
 </div>
 <script src="script.js"></script>
